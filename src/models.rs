@@ -1,9 +1,18 @@
 use serde::{Serialize, Deserialize};
+use uuid::Uuid;
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Credentail {
     pub username: String,
     pub password: String,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
+pub struct ClientRegister {
+    pub client_name: String,
+    pub client_email: String,
+    pub client_website: String,
+    pub uuid: Option<String>
 }
 
 
